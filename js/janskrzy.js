@@ -13,6 +13,20 @@ function janskrzy (fase) {
             borderRadius: "50%",
             backgroundColor: "blue",
             rotation: 360,
+            left: "30vw",
+            top: "calc(50vh-20vh)",
+            width: "40vw",
+            height: "40vw",
+        })
+        // Last box
+        .to("#janskrzy .box",{
+            borderRadius: "0",
+            backgroundColor: "white",
+            rotation: 360,
+            left: "40vw",
+            top: "calc(50vh-10vh)",
+            width: "20vw",
+            height: "20vw",
         });
     }
 }
