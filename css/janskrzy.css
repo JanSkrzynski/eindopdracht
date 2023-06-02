@@ -1,15 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=VT323&display=swap");
+/*
+font-family: 'Ubuntu Mono', monospace;
+font-family: 'VT323', monospace;
+*/
 #janskrzy {
-  font-family: "Roboto", sans-serif;
-  background-color: hsl(0, 0%, 99%);
-  color: hsl(0, 0%, 39%);
-  z-index: -1;
+  font-family: "Ubuntu Mono", monospace;
+  --background-color: hsl(0, 0%, 0%);
+  --clr-pong: hsl(0, 0%, 100%);
 }
-#janskrzy .title-sequence {
-  padding: 40vh 20vw;
+#janskrzy .box {
+  z-index: 100;
 }
-#janskrzy .title-sequence .title {
-  font-size: 7rem;
-  text-transform: uppercase;
+#janskrzy .intro {
+  border-top: 1rem solid white;
+  border-bottom: 1rem solid white;
+  height: 200vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: ". . right" "title title title" "left . ." "left . .";
+  background-color: var(--background-color);
+}
+#janskrzy .intro__title {
+  font-size: 5rem;
   text-align: center;
+  grid-area: title;
+}
+#janskrzy .intro__box {
+  height: 25vh;
+  width: 2.5vw;
+  background-color: var(--background-color);
+  border: 0.5rem solid var(--clr-pong);
+}
+#janskrzy .intro__box--left {
+  grid-area: left;
+  margin-left: 2vw;
+}
+#janskrzy .intro__box--right {
+  grid-area: right;
+  justify-self: end;
+  align-self: center;
+  margin-right: 2vw;
+}
+#janskrzy .first-consoles {
+  height: 100vh;
 }/*# sourceMappingURL=janskrzy.css.map */

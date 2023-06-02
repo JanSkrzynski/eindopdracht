@@ -1,36 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=VT323&display=swap");
+
+/*
+font-family: 'Ubuntu Mono', monospace;
+font-family: 'VT323', monospace;
+*/
 
 #janskrzy {
-    font-family: 'Roboto', sans-serif;
-    background-color: hsl(0, 0%, 99%);
-    color: hsl(0, 0%, 39%);
-    z-index: -1;
-    // INTRO
-    // .intro {
+  font-family: "Ubuntu Mono", monospace;
 
-    // }
+  --background-color: hsl(0, 0%, 0%);
+  --clr-pong: hsl(0, 0%, 100%);
 
-    // TITLE-SEQUENCE
-    .title-sequence {
-        padding: 40vh 20vw;
-        .title {
-            font-size: 7rem;
-            text-transform: uppercase;
-            text-align: center;
-        }
+  .box {
+    z-index: 100;
+  }
+
+  .intro {
+    border-top: 1rem solid white;
+    border-bottom: 1rem solid white;
+    height: 200vh;
+    margin: 0 auto;
+    display: grid;
+    // padding-top: 40vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      ". . right"
+      "title title title"
+      "left . ."
+      "left . .";
+    background-color: var(--background-color);
+
+    &__title {
+      font-size: 5rem;
+      text-align: center;
+      grid-area: title;
     }
-    // EXPLANATION
 
-    // CO-OP
+    &__box {
+      height: 25vh;
+      width: 2.5vw;
+      background-color: var(--background-color);
+      border: 0.5rem solid var(--clr-pong);
 
-    // VILLAINS
+      &--left {
+        grid-area: left;
+        margin-left: 2vw;
+      }
 
-    // FALL
+      &--right {
+        grid-area: right;
+        justify-self: end;
+        align-self: center;
+        margin-right: 2vw;
+      }
+    }
+  }
 
-    // BOUNCE
-
-    // TURRET
-
-    // SPACE
-    
+  .first-consoles {
+    height: 100vh;
+  }
 }
